@@ -1,0 +1,24 @@
+[
+  {
+    "approach": "Standard Load Balancer",
+    "total_operations": 20,
+    "throttled_count": 0,
+    "failed_count": 0,
+    "total_time": 0.00012993812561035156,
+    "avg_latency": 0.004209900362184271,
+    "peak_load": 0.015974001144059002,
+    "recovery_time": 0,
+    "overhead_ms": 0.0030051498470129445
+  },
+  {
+    "approach": "Thermodynamic Substrate",
+    "total_operations": 20,
+    "throttled_count": 0,
+    "failed_count": 0,
+    "total_time": 0.0008218288421630859,
+    "avg_latency": 0.037815250470885076,
+    "peak_load": 0.09401499846717343,
+    "recovery_time": 0,
+    "overhead_ms": 0.031578449488733895
+  }
+]
