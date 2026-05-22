@@ -34,23 +34,23 @@ jobs:
         run: |
           python -c "from thermal_substrate import ThermalSubstrate; print('Import successful')"
           python - <<'PY'
-from thermal_substrate import ThermalSubstrate
-import tempfile
-import os
+          from thermal_substrate import ThermalSubstrate
+          import tempfile
+          import os
 
-with tempfile.NamedTemporaryFile(delete=False) as f:
-    db_path = f.name
+          with tempfile.NamedTemporaryFile(delete=False) as f:
+              db_path = f.name
 
-try:
-    tcs = ThermalSubstrate(db_path)
-    tcs.register_entity('test_entity', 'test', initial_temp=300)
-    result = tcs.execute_with_coupling('test_op', 'test_entity')
-    assert result is not None
-    assert 'phase_coefficient' in result or 'phase' in result
-    print('Basic functionality test passed')
-finally:
-    os.unlink(db_path)
-PY
+          try:
+              tcs = ThermalSubstrate(db_path)
+              tcs.register_entity('test_entity', 'test', initial_temp=300)
+              result = tcs.execute_with_coupling('test_op', 'test_entity')
+              assert result is not None
+              assert 'phase_coefficient' in result or 'phase' in result
+              print('Basic functionality test passed')
+          finally:
+              os.unlink(db_path)
+          PY
 
   build:
     needs: test
