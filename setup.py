@@ -9,6 +9,8 @@ setup(
     author="TCS Contributors",
     author_email="",
     url="https://github.com/prettybusysolutions-eng/thermodynamic-substrate",
+    license="MIT",
+    license_files=(),
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
