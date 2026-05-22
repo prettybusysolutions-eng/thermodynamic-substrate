@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="thermodynamic-substrate",
-    version="1.0.0",
+    version="1.0.1",
     description="Non-von Neumann runtime with thermodynamic execution physics",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
