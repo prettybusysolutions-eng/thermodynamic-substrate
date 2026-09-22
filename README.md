@@ -110,6 +110,8 @@ That overhead is expected at small scales where thermal bookkeeping dominates. T
 
 MIT License - see LICENSE file
 
+Release status and gates are documented in [RELEASING.md](RELEASING.md).
+
 ## Citation
 
 ```bibtex
