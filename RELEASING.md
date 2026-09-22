@@ -8,7 +8,7 @@ The current GitHub and package release line is `v1.0.1`. Future releases must ke
 2. Reproduce the repository quickstart in a clean environment.
 3. Confirm all required GitHub checks pass on that commit.
 4. Update the changelog or prepare generated release notes.
-5. Create an annotated Semantic Versioning tag: \`vMAJOR.MINOR.PATCH\`.
+5. Create an annotated Semantic Versioning tag: `vMAJOR.MINOR.PATCH`.
 6. Create a GitHub release from that exact tag.
 7. Verify any package registry version and digest match the release.
 
