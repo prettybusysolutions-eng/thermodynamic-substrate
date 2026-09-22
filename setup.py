@@ -10,7 +10,7 @@ setup(
     author_email="",
     url="https://github.com/prettybusysolutions-eng/thermodynamic-substrate",
     license="MIT",
-    license_files=(),
+    license_files=("LICENSE",),
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
