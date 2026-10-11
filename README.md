@@ -141,3 +141,11 @@ Contributions welcome! Please:
 ---
 
 **A new kind of computer. One that runs on computational friction.**
+
+## Tested state and limits
+
+Temperature is a heuristic state variable. It does not establish a physical computing advantage or better application outcomes. Mutations are serialized with SQLite immediate transactions and a per-instance lock; phase and derived energy update with temperature. Transfer resolves entities by identity, constrains conductivity to [0,1], and rejects non-finite or negative temperatures. Re-registration intentionally replaces state. Use methods instead of writing directly through `db`; close the instance after use.
+
+The invariant suite exercises reversed entity ordering, zero and large finite values, two-connection concurrent writes, and reopening durable state. SQLite serializes writers; distributed throughput and crash/power-loss restoration remain unmeasured.
+
+Run `python benchmarks/compare.py` after installation to compare local per-operation durable commits against a conventional SQLite counter. `benchmarks/local-result.json` records one local run, including platform and scope. It measures overhead, not useful-work accuracy, adoption, cloud cost, or a claimed speed advantage.
