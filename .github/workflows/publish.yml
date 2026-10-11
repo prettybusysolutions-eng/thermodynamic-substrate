@@ -30,6 +30,9 @@ jobs:
           pip install -e .
           pip install numpy
 
+      - name: Verify numerical, persistence and concurrent state invariants
+        run: python -m unittest discover -s tests -v
+
       - name: Run basic tests
         run: |
           python -c "from thermal_substrate import ThermalSubstrate; print('Import successful')"
